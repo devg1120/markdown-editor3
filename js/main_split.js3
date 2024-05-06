@@ -1,8 +1,6 @@
 import { MarkDownEditor } from "./MarkDownEditor.js";
 import { Contents } from "./Contents.js";
 
-import { TreeViewNavigation } from "../aria-practices/treeview/js/treeview-navigation.js";
-
 var open_button = document.querySelector("#openfile");
 var saveAs_button = document.querySelector("#saveAsfile");
 var save_button = document.querySelector("#savefile");
@@ -708,17 +706,6 @@ let diff_ck_localFileSaveContent = (content) => {
     }
   }
 };
-
-// ----- Nav -----
-function test_callback(linkURL, linkName, moveFocus) {
-    console.log("*updateCallback:"+ linkURL +" ["+ linkName + "] focus:"+ moveFocus) 
-}
-
-var nav = document.querySelector('nav');
-
-var navtree = new TreeViewNavigation(nav, test_callback);
-
-
 // ----- local state -----
 
 let loadLastContent = () => {

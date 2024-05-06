@@ -37,8 +37,8 @@ class NavigationContentGenerator {
   }
 }
 
-class TreeViewNavigation {
-  constructor(node) {
+export class TreeViewNavigation {
+  constructor(node, callback) {
     var linkURL, linkTitle;
 
     // Check whether node is a DOM element
@@ -51,6 +51,8 @@ class TreeViewNavigation {
 
     this.treeNode = node;
     this.navNode = node.parentElement;
+
+    this.updateCallback = callback ;
 
     this.treeitems = this.treeNode.querySelectorAll('[role="treeitem"]');
     for (let i = 0; i < this.treeitems.length; i++) {
@@ -101,6 +103,9 @@ class TreeViewNavigation {
   }
 
   updateContent(linkURL, linkName, moveFocus) {
+
+    //console.log("updateContent::"+ linkURL +" > "+ linkName) 
+    
     var h1Node, paraNodes;
 
     if (typeof moveFocus !== 'boolean') {
@@ -108,11 +113,11 @@ class TreeViewNavigation {
     }
 
     // Update content area
-    h1Node = document.querySelector('.page .main h1');
+    h1Node = document.querySelector('.mainpage .main h1');
     if (h1Node) {
       h1Node.textContent = linkName;
     }
-    paraNodes = document.querySelectorAll('.page .main p');
+    paraNodes = document.querySelectorAll('.mainpage .main p');
     paraNodes.forEach(
       (p) =>
         (p.innerHTML = this.contentGenerator.renderParagraph(linkURL, linkName))
@@ -126,6 +131,9 @@ class TreeViewNavigation {
 
     // Update aria-current
     this.updateAriaCurrent(linkURL);
+
+    // GS callback
+    this.updateCallback(linkURL, linkName, moveFocus) ;
   }
 
   getAriaCurrentURL() {
@@ -497,10 +505,16 @@ class TreeViewNavigation {
  * @description  after page has loaded initialize all treeitems based on the role=treeitem
  */
 
+function test_callback(linkURL, linkName, moveFocus) {
+    console.log("updateCallback::"+ linkURL +" ["+ linkName + "] focus:"+ moveFocus) 
+}
+
+/*
 window.addEventListener('load', function () {
   var trees = document.querySelectorAll('nav [role="tree"]');
 
   for (let i = 0; i < trees.length; i++) {
-    new TreeViewNavigation(trees[i]);
+    new TreeViewNavigation(trees[i], test_callback);
   }
 });
+*/

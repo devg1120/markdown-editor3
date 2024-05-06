@@ -58,12 +58,14 @@ header {
 }
 */
 
-.page {
 
+.mainpage {
   padding-top: 5vh; 
-  height:92vh 
-
+  height:92vh ;
+ display: flex;
+  flex-direction: row;
 }
+
 
 main {
   margin: 0;
@@ -73,6 +75,36 @@ main {
   height:92vh 
   */
 }
+
+.tabs {
+ width:220px;
+
+}
+
+
+#tab-1,#tab-2,#tab-3,#tab-4 {
+  /* 上 | 左右 | 下 */
+ /*padding: 2px 2px 4px;*/
+ padding: 1px 0px 0px;
+}
+
+/*
+#tab-1 > span.focus{
+  border:0px;
+}
+
+#tab-2 > span.focus{
+  border:5px;
+}
+
+#tab-3 > span.focus{
+  border:0px;
+}
+
+#tab-4 > span.focus{
+  border:0px;
+}
+*/
 
 /*
 nav {
@@ -86,7 +118,7 @@ header {
   /*height: 50px; */
   height: 5vh; 
   background: #CCC; 
-  padding: 20px 60px; 
+  padding: 0px 60px; 
   box-sizing: border-box;
   top: 0; 
   left: 0; 

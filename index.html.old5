@@ -129,27 +129,8 @@
         /></a>
       </div>
     </header>
-    <div class="mainpage">
+    <div class="page">
 
-
-<!---------------------------->
-          <div class="tabs">
-            <div role="tablist" aria-labelledby="tablist-1" class="automatic">
-              <button id="tab-1" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1">
-                <span class="focus">Maria</span>
-              </button>
-              <button id="tab-2" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-2" tabindex="-1">
-                <span class="focus">Carl</span>
-              </button>
-              <button id="tab-3" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-3" tabindex="-1">
-                <span class="focus">Ida</span>
-              </button>
-              <button id="tab-4" type="button" role="tab" aria-selected="false" aria-controls="tabpanel-4" tabindex="-1">
-                <span class="focus">Peter</span>
-              </button>
-            </div>
-
-            <div id="tabpanel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
 
 <!---------------------------->
 <nav aria-label="Mythical University">
@@ -366,32 +347,9 @@
   </ul>
 </nav>
 <!---------------------------->
-          </div>
-            <div id="tabpanel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" class="is-hidden">
-              <p>
-                Carl Joachim Andersen (29 April 1847 – 7 May 1909) was a Danish flutist, conductor and composer born in Copenhagen, son of the flutist Christian Joachim Andersen.
-                Both as a virtuoso and as composer of flute music, he is considered one of the best of his time.
-                He was considered to be a tough leader and teacher and demanded as such a lot from his orchestras but through that style he reached a high level.
-              </p>
-            </div>
-            <div id="tabpanel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" class="is-hidden">
-              <p>
-                Ida Henriette da Fonseca (July 27, 1802 – July 6, 1858) was a Danish opera singer and composer.
-                Ida Henriette da Fonseca was the daughter of Abraham da Fonseca (1776–1849) and Marie Sofie Kiærskou (1784–1863).
-                She and her sister Emilie da Fonseca were students of Giuseppe Siboni, choir master of the Opera in Copenhagen.
-                She was given a place at the royal Opera alongside her sister the same year she debuted in 1827.
-              </p>
-            </div>
-            <div id="tabpanel-4" role="tabpanel" tabindex="0" aria-labelledby="tab-4" class="is-hidden">
-              <p>
-                Peter Erasmus Lange-Müller (1 December 1850 – 26 February 1926) was a Danish composer and pianist.
-                His compositional style was influenced by Danish folk music and by the work of Robert Schumann; Johannes Brahms; and his Danish countrymen, including J.P.E. Hartmann.
-              </p>
-            </div>
-          </div>
 
-<!---------------------------->
-
+  </body>
+</html>
     <main data-flex-splitter-vertical  style="flex: auto">
       <div
         data-flex-splitter-horizontal
@@ -472,7 +430,6 @@
     </main>
 
     </div>
-
     <footer>gusa maerkdown editor</footer>
 
   </body>
